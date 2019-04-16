@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAPIService = ApiUtils.getAPIService();
-//        mAPIService.getBooks().observeOn(AndroidSchedulers.mainThread())
-//                .subscribeOn(Schedulers.io())
-//                .subscribe(item -> Log.d("test", String.valueOf(item.size())), err -> Log.d("test", err.getMessage()));
+        mAPIService.getBooks().observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(item -> Log.d("test", String.valueOf(item.size())), err -> Log.d("test", err.getMessage()));
 
 //        mAPIService.saveBook(6, "Conan", "goso").enqueue(new Callback<Book>() {
 //            @Override
